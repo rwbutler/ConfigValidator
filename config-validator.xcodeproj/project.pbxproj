@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		131E30142191976100BD4770 /* DefaultMessagingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E30132191976100BD4770 /* DefaultMessagingService.swift */; };
+		1321103F2191A51200F56785 /* MessagingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321103E2191A51200F56785 /* MessagingOptions.swift */; };
+		1345777B20C1855D00D45C43 /* CommandLineArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345777A20C1855D00D45C43 /* CommandLineArgument.swift */; };
+		1345777D20C1857E00D45C43 /* UploadMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345777C20C1857E00D45C43 /* UploadMethod.swift */; };
+		1363053A20FE35C700994D6D /* SlackMessagingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1363053920FE35C700994D6D /* SlackMessagingService.swift */; };
+		1363053D20FE3E0500994D6D /* DateFormatterAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1363053C20FE3E0500994D6D /* DateFormatterAdditions.swift */; };
+		137228A520BFFB8E00866F25 /* ContentDeliveryNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137228A420BFFB8E00866F25 /* ContentDeliveryNetworkService.swift */; };
+		1373813020BD9E1500BAEA6C /* DefaultFileValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373812F20BD9E1500BAEA6C /* DefaultFileValidator.swift */; };
+		1373813320BEA96B00BAEA6C /* GitVersionControlService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373813220BEA96B00BAEA6C /* GitVersionControlService.swift */; };
+		1373813720BEA99800BAEA6C /* VersionControlService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373813620BEA99800BAEA6C /* VersionControlService.swift */; };
+		1373813B20BEADBC00BAEA6C /* MessagingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373813A20BEADBC00BAEA6C /* MessagingService.swift */; };
+		1373813F20BEAE7500BAEA6C /* ConsoleMessagingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373813E20BEAE7500BAEA6C /* ConsoleMessagingService.swift */; };
+		1373814220BEB39E00BAEA6C /* MessagingLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373814120BEB39E00BAEA6C /* MessagingLevel.swift */; };
+		137609162130437100E14C2E /* AWSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137609152130437100E14C2E /* AWSService.swift */; };
+		13DFFCC12106683700FBE71B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DFFCC02106683700FBE71B /* Result.swift */; };
+		13EA6C2E219492110057724A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA6C2D219492110057724A /* Task.swift */; };
+		13EA6C32219498420057724A /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA6C31219498420057724A /* TaskService.swift */; };
+		13EA6C352194993D0057724A /* DefaultTaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA6C342194993D0057724A /* DefaultTaskService.swift */; };
+		13EA6C372194A6DB0057724A /* GitVersionControlAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA6C362194A6DB0057724A /* GitVersionControlAction.swift */; };
+		13EA6C3C2194A9630057724A /* ArgumentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA6C3B2194A9630057724A /* ArgumentsService.swift */; };
+		13EA6C3E2194A9710057724A /* CommandLineArgumentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA6C3D2194A9710057724A /* CommandLineArgumentsService.swift */; };
+		13EA6C402194A9B20057724A /* ConfigValidatorArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA6C3F2194A9B20057724A /* ConfigValidatorArguments.swift */; };
+		OBJ_28 /* CommandLineProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* CommandLineProcessor.swift */; };
+		OBJ_29 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Services.swift */; };
+		OBJ_30 /* JSONFileValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* JSONFileValidator.swift */; };
+		OBJ_31 /* PLUtilPropertyListFileValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* PLUtilPropertyListFileValidator.swift */; };
+		OBJ_32 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* ValidationService.swift */; };
+		OBJ_33 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* main.swift */; };
+		OBJ_40 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		131E30132191976100BD4770 /* DefaultMessagingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMessagingService.swift; sourceTree = "<group>"; };
+		1321103E2191A51200F56785 /* MessagingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingOptions.swift; sourceTree = "<group>"; };
+		1345777A20C1855D00D45C43 /* CommandLineArgument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineArgument.swift; sourceTree = "<group>"; };
+		1345777C20C1857E00D45C43 /* UploadMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadMethod.swift; sourceTree = "<group>"; };
+		1363053920FE35C700994D6D /* SlackMessagingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackMessagingService.swift; sourceTree = "<group>"; };
+		1363053C20FE3E0500994D6D /* DateFormatterAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterAdditions.swift; sourceTree = "<group>"; };
+		137228A420BFFB8E00866F25 /* ContentDeliveryNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDeliveryNetworkService.swift; sourceTree = "<group>"; };
+		1373812F20BD9E1500BAEA6C /* DefaultFileValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFileValidator.swift; sourceTree = "<group>"; };
+		1373813220BEA96B00BAEA6C /* GitVersionControlService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitVersionControlService.swift; sourceTree = "<group>"; };
+		1373813620BEA99800BAEA6C /* VersionControlService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionControlService.swift; sourceTree = "<group>"; };
+		1373813A20BEADBC00BAEA6C /* MessagingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingService.swift; sourceTree = "<group>"; };
+		1373813E20BEAE7500BAEA6C /* ConsoleMessagingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleMessagingService.swift; sourceTree = "<group>"; };
+		1373814120BEB39E00BAEA6C /* MessagingLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingLevel.swift; sourceTree = "<group>"; };
+		137609152130437100E14C2E /* AWSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSService.swift; sourceTree = "<group>"; };
+		13DFFCC02106683700FBE71B /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		13EA6C2D219492110057724A /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		13EA6C31219498420057724A /* TaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
+		13EA6C342194993D0057724A /* DefaultTaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTaskService.swift; sourceTree = "<group>"; };
+		13EA6C362194A6DB0057724A /* GitVersionControlAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitVersionControlAction.swift; sourceTree = "<group>"; };
+		13EA6C3B2194A9630057724A /* ArgumentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentsService.swift; sourceTree = "<group>"; };
+		13EA6C3D2194A9710057724A /* CommandLineArgumentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineArgumentsService.swift; sourceTree = "<group>"; };
+		13EA6C3F2194A9B20057724A /* ConfigValidatorArguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigValidatorArguments.swift; sourceTree = "<group>"; };
+		OBJ_10 /* CommandLineProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineProcessor.swift; sourceTree = "<group>"; };
+		OBJ_12 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		OBJ_15 /* JSONFileValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileValidator.swift; sourceTree = "<group>"; };
+		OBJ_16 /* PLUtilPropertyListFileValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLUtilPropertyListFileValidator.swift; sourceTree = "<group>"; };
+		OBJ_18 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
+		OBJ_19 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		"config-validator::config-validator::Product" /* config-validator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = "config-validator"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1345777E20C1859300D45C43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1345777A20C1855D00D45C43 /* CommandLineArgument.swift */,
+				1345777C20C1857E00D45C43 /* UploadMethod.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1363053B20FE3DE700994D6D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				13EA6C502198DAD20057724A /* Extensions */,
+				13760917213043BB00E14C2E /* Model */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		137228A120BFFB6300866F25 /* Cloud Storage */ = {
+			isa = PBXGroup;
+			children = (
+				137228A320BFFB7F00866F25 /* Protocol */,
+				137228A220BFFB7B00866F25 /* Implementation */,
+			);
+			path = "Cloud Storage";
+			sourceTree = "<group>";
+		};
+		137228A220BFFB7B00866F25 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				137609152130437100E14C2E /* AWSService.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		137228A320BFFB7F00866F25 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				137228A420BFFB8E00866F25 /* ContentDeliveryNetworkService.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		1373813120BEA95A00BAEA6C /* Versioning */ = {
+			isa = PBXGroup;
+			children = (
+				1373813520BEA98400BAEA6C /* Protocol */,
+				1373813420BEA97E00BAEA6C /* Implementation */,
+			);
+			path = Versioning;
+			sourceTree = "<group>";
+		};
+		1373813420BEA97E00BAEA6C /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				1373813220BEA96B00BAEA6C /* GitVersionControlService.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		1373813520BEA98400BAEA6C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1373813620BEA99800BAEA6C /* VersionControlService.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		1373813820BEAD9500BAEA6C /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				1373813E20BEAE7500BAEA6C /* ConsoleMessagingService.swift */,
+				1363053920FE35C700994D6D /* SlackMessagingService.swift */,
+				131E30132191976100BD4770 /* DefaultMessagingService.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		1373813920BEAD9C00BAEA6C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1373813A20BEADBC00BAEA6C /* MessagingService.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		1373813C20BEAE1100BAEA6C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1345777E20C1859300D45C43 /* Model */,
+				OBJ_10 /* CommandLineProcessor.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1373813D20BEAE1B00BAEA6C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				13EA6C382194A9250057724A /* Arguments */,
+				137228A120BFFB6300866F25 /* Cloud Storage */,
+				OBJ_9 /* Messaging */,
+				OBJ_11 /* Shared */,
+				13EA6C2F2194982B0057724A /* Task */,
+				OBJ_13 /* Validator */,
+				1373813120BEA95A00BAEA6C /* Versioning */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1373814020BEB38B00BAEA6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1373814120BEB39E00BAEA6C /* MessagingLevel.swift */,
+				1321103E2191A51200F56785 /* MessagingOptions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		13760917213043BB00E14C2E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13DFFCC02106683700FBE71B /* Result.swift */,
+				13EA6C2D219492110057724A /* Task.swift */,
+				13EA6C362194A6DB0057724A /* GitVersionControlAction.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		13EA6C2F2194982B0057724A /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				13EA6C332194992C0057724A /* Implementation */,
+				13EA6C30219498350057724A /* Protocol */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		13EA6C30219498350057724A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				13EA6C31219498420057724A /* TaskService.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		13EA6C332194992C0057724A /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				13EA6C342194993D0057724A /* DefaultTaskService.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		13EA6C382194A9250057724A /* Arguments */ = {
+			isa = PBXGroup;
+			children = (
+				13EA6C4F2198D7CA0057724A /* Model */,
+				13EA6C3A2194A9320057724A /* Implementation */,
+				13EA6C392194A92E0057724A /* Protocol */,
+			);
+			path = Arguments;
+			sourceTree = "<group>";
+		};
+		13EA6C392194A92E0057724A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				13EA6C3B2194A9630057724A /* ArgumentsService.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		13EA6C3A2194A9320057724A /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				13EA6C3D2194A9710057724A /* CommandLineArgumentsService.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		13EA6C4F2198D7CA0057724A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13EA6C3F2194A9B20057724A /* ConfigValidatorArguments.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		13EA6C502198DAD20057724A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1363053C20FE3E0500994D6D /* DateFormatterAdditions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		OBJ_11 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_12 /* Services.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		OBJ_13 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_14 /* Implementation */,
+				OBJ_17 /* Protocol */,
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
+		OBJ_14 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_15 /* JSONFileValidator.swift */,
+				OBJ_16 /* PLUtilPropertyListFileValidator.swift */,
+				1373812F20BD9E1500BAEA6C /* DefaultFileValidator.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		OBJ_17 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_18 /* ValidationService.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		OBJ_20 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"config-validator::config-validator::Product" /* config-validator */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_20 /* Tests */,
+				OBJ_21 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* config-validator */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* config-validator */ = {
+			isa = PBXGroup;
+			children = (
+				1363053B20FE3DE700994D6D /* Shared */,
+				1373813D20BEAE1B00BAEA6C /* Services */,
+				1373813C20BEAE1100BAEA6C /* UI */,
+				OBJ_19 /* main.swift */,
+			);
+			name = "config-validator";
+			path = "Sources/config-validator";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_9 /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				1373814020BEB38B00BAEA6C /* Model */,
+				1373813920BEAD9C00BAEA6C /* Protocol */,
+				1373813820BEAD9500BAEA6C /* Implementation */,
+			);
+			path = Messaging;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"config-validator::SwiftPMPackageDescription" /* config-validatorPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_36 /* Build configuration list for PBXNativeTarget "config-validatorPackageDescription" */;
+			buildPhases = (
+				OBJ_39 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "config-validatorPackageDescription";
+			productName = "config-validatorPackageDescription";
+			productType = "com.apple.product-type.framework";
+		};
+		"config-validator::config-validator" /* config-validator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_24 /* Build configuration list for PBXNativeTarget "config-validator" */;
+			buildPhases = (
+				OBJ_27 /* Sources */,
+				OBJ_34 /* Frameworks */,
+				1383DE7B21696EA3005F5AC8 /* SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "config-validator";
+			productName = config_validator;
+			productReference = "config-validator::config-validator::Product" /* config-validator */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				TargetAttributes = {
+					"config-validator::config-validator" = {
+						LastSwiftMigration = 1000;
+					};
+				};
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "config-validator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5;
+			productRefGroup = OBJ_21 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"config-validator::config-validator" /* config-validator */,
+				"config-validator::SwiftPMPackageDescription" /* config-validatorPackageDescription */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1383DE7B21696EA3005F5AC8 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				131E30142191976100BD4770 /* DefaultMessagingService.swift in Sources */,
+				1363053D20FE3E0500994D6D /* DateFormatterAdditions.swift in Sources */,
+				1373813320BEA96B00BAEA6C /* GitVersionControlService.swift in Sources */,
+				137228A520BFFB8E00866F25 /* ContentDeliveryNetworkService.swift in Sources */,
+				13EA6C2E219492110057724A /* Task.swift in Sources */,
+				OBJ_28 /* CommandLineProcessor.swift in Sources */,
+				13EA6C3E2194A9710057724A /* CommandLineArgumentsService.swift in Sources */,
+				OBJ_29 /* Services.swift in Sources */,
+				OBJ_30 /* JSONFileValidator.swift in Sources */,
+				OBJ_31 /* PLUtilPropertyListFileValidator.swift in Sources */,
+				OBJ_32 /* ValidationService.swift in Sources */,
+				1373813020BD9E1500BAEA6C /* DefaultFileValidator.swift in Sources */,
+				1373814220BEB39E00BAEA6C /* MessagingLevel.swift in Sources */,
+				13EA6C352194993D0057724A /* DefaultTaskService.swift in Sources */,
+				137609162130437100E14C2E /* AWSService.swift in Sources */,
+				1373813720BEA99800BAEA6C /* VersionControlService.swift in Sources */,
+				1363053A20FE35C700994D6D /* SlackMessagingService.swift in Sources */,
+				1345777D20C1857E00D45C43 /* UploadMethod.swift in Sources */,
+				OBJ_33 /* main.swift in Sources */,
+				13DFFCC12106683700FBE71B /* Result.swift in Sources */,
+				1373813B20BEADBC00BAEA6C /* MessagingService.swift in Sources */,
+				1321103F2191A51200F56785 /* MessagingOptions.swift in Sources */,
+				1345777B20C1855D00D45C43 /* CommandLineArgument.swift in Sources */,
+				13EA6C402194A9B20057724A /* ConfigValidatorArguments.swift in Sources */,
+				13EA6C3C2194A9630057724A /* ArgumentsService.swift in Sources */,
+				13EA6C32219498420057724A /* TaskService.swift in Sources */,
+				13EA6C372194A6DB0057724A /* GitVersionControlAction.swift in Sources */,
+				1373813F20BEAE7500BAEA6C /* ConsoleMessagingService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_40 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "config-validator.xcodeproj/config_validator_Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = "config-validator";
+			};
+			name = Debug;
+		};
+		OBJ_26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "config-validator.xcodeproj/config_validator_Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = "config-validator";
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_2 /* Build configuration list for PBXProject "config-validator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_24 /* Build configuration list for PBXNativeTarget "config-validator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_25 /* Debug */,
+				OBJ_26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_36 /* Build configuration list for PBXNativeTarget "config-validatorPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_37 /* Debug */,
+				OBJ_38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}

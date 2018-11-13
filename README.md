@@ -4,7 +4,16 @@
 [![CI Status](http://img.shields.io/travis/rwbutler/ConfigValidator.svg?style=flat)](https://travis-ci.org/rwbutler/ConfigValidator)
 [![License](https://img.shields.io/cocoapods/l/TypographyKit.svg?style=flat)](http://cocoapods.org/pods/)
 
-Config Validator validates & uploads your configuration files and cache clears your CDN as part of your CI process.
+Config Validator validates & uploads your configuration files and clears CDN cache as part of your CI process.
+
+## Features
+
+- [x] Validates JSON or Property List (.plist) files.
+- [x] Uploads only valid files modified in latest Git commit to Amazon S3 (AWS).
+- [x] Sets uploaded files public readable.
+- [x] Invalidates CloudFront cache for uploaded files.
+- [x] Supports integration with Slack.
+- [x] Written in Swift.
 
 ## Author
 
