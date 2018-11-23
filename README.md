@@ -3,6 +3,7 @@
 
 [![CI Status](http://img.shields.io/travis/rwbutler/ConfigValidator.svg?style=flat)](https://travis-ci.org/rwbutler/ConfigValidator)
 [![License](https://img.shields.io/cocoapods/l/TypographyKit.svg?style=flat)](http://cocoapods.org/pods/)
+![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)
 
 Config Validator validates & uploads your configuration files and clears CDN cache as part of your CI process.
 
