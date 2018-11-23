@@ -6,6 +6,8 @@
 
 Config Validator validates & uploads your configuration files and clears CDN cache as part of your CI process.
 
+For more information on Config Validator, take a look at the [keynote presentation](https://github.com/rwbutler/ConfigValidator/blob/master/docs/presentations/config-validator.pdf).
+
 ## Features
 
 - [x] Validates JSON or Property List (.plist) files.
