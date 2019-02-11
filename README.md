@@ -5,6 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/TypographyKit.svg?style=flat)](http://cocoapods.org/pods/)
 ![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)
 [![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](https://swift.org/)
+[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 
 Config Validator validates & uploads your configuration files and clears CDN cache as part of your CI process.
 
