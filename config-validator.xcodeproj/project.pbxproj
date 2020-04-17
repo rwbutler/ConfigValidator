@@ -9,12 +9,27 @@
 /* Begin PBXBuildFile section */
 		131E30142191976100BD4770 /* DefaultMessagingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E30132191976100BD4770 /* DefaultMessagingService.swift */; };
 		1321103F2191A51200F56785 /* MessagingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321103E2191A51200F56785 /* MessagingOptions.swift */; };
+		132652F1244A4549003FDA45 /* StrategicFileValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132652F0244A4549003FDA45 /* StrategicFileValidationService.swift */; };
+		132652F3244A4575003FDA45 /* FileValidationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132652F2244A4575003FDA45 /* FileValidationStrategy.swift */; };
+		1326530A244A51A7003FDA45 /* JSONValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132652F5244A4E83003FDA45 /* JSONValidationTests.swift */; };
+		1326530B244A5204003FDA45 /* JSONSerializationValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* JSONSerializationValidationService.swift */; };
+		1326530C244A5207003FDA45 /* StrategicFileValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132652F0244A4549003FDA45 /* StrategicFileValidationService.swift */; };
+		1326530D244A520B003FDA45 /* FileValidationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132652F2244A4575003FDA45 /* FileValidationStrategy.swift */; };
+		1326530E244A5218003FDA45 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* ValidationService.swift */; };
+		1326530F244A522F003FDA45 /* PLUtilValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* PLUtilValidationService.swift */; };
+		13265319244A52F8003FDA45 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13265313244A52E8003FDA45 /* Info.plist */; };
+		1326531D244A5403003FDA45 /* PropertyListValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326531C244A5403003FDA45 /* PropertyListValidationTests.swift */; };
+		13265329244A5646003FDA45 /* empty.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13265326244A5646003FDA45 /* empty.plist */; };
+		1326532A244A5646003FDA45 /* invalid.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13265327244A5646003FDA45 /* invalid.plist */; };
+		1326532B244A5646003FDA45 /* valid.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13265328244A5646003FDA45 /* valid.plist */; };
+		1326532F244A5672003FDA45 /* empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 1326532C244A5671003FDA45 /* empty.json */; };
+		13265330244A5672003FDA45 /* invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = 1326532D244A5671003FDA45 /* invalid.json */; };
+		13265331244A5672003FDA45 /* valid.json in Resources */ = {isa = PBXBuildFile; fileRef = 1326532E244A5672003FDA45 /* valid.json */; };
 		1345777B20C1855D00D45C43 /* CommandLineArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345777A20C1855D00D45C43 /* CommandLineArgument.swift */; };
 		1345777D20C1857E00D45C43 /* UploadMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345777C20C1857E00D45C43 /* UploadMethod.swift */; };
 		1363053A20FE35C700994D6D /* SlackMessagingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1363053920FE35C700994D6D /* SlackMessagingService.swift */; };
 		1363053D20FE3E0500994D6D /* DateFormatterAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1363053C20FE3E0500994D6D /* DateFormatterAdditions.swift */; };
 		137228A520BFFB8E00866F25 /* ContentDeliveryNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137228A420BFFB8E00866F25 /* ContentDeliveryNetworkService.swift */; };
-		1373813020BD9E1500BAEA6C /* DefaultFileValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373812F20BD9E1500BAEA6C /* DefaultFileValidator.swift */; };
 		1373813320BEA96B00BAEA6C /* GitVersionControlService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373813220BEA96B00BAEA6C /* GitVersionControlService.swift */; };
 		1373813720BEA99800BAEA6C /* VersionControlService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373813620BEA99800BAEA6C /* VersionControlService.swift */; };
 		1373813B20BEADBC00BAEA6C /* MessagingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373813A20BEADBC00BAEA6C /* MessagingService.swift */; };
@@ -31,8 +46,8 @@
 		13EA6C402194A9B20057724A /* ConfigValidatorArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA6C3F2194A9B20057724A /* ConfigValidatorArguments.swift */; };
 		OBJ_28 /* CommandLineProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* CommandLineProcessor.swift */; };
 		OBJ_29 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Services.swift */; };
-		OBJ_30 /* JSONFileValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* JSONFileValidator.swift */; };
-		OBJ_31 /* PLUtilPropertyListFileValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* PLUtilPropertyListFileValidator.swift */; };
+		OBJ_30 /* JSONSerializationValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* JSONSerializationValidationService.swift */; };
+		OBJ_31 /* PLUtilValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* PLUtilValidationService.swift */; };
 		OBJ_32 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* ValidationService.swift */; };
 		OBJ_33 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* main.swift */; };
 		OBJ_40 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
@@ -41,12 +56,23 @@
 /* Begin PBXFileReference section */
 		131E30132191976100BD4770 /* DefaultMessagingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMessagingService.swift; sourceTree = "<group>"; };
 		1321103E2191A51200F56785 /* MessagingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingOptions.swift; sourceTree = "<group>"; };
+		132652F0244A4549003FDA45 /* StrategicFileValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategicFileValidationService.swift; sourceTree = "<group>"; };
+		132652F2244A4575003FDA45 /* FileValidationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileValidationStrategy.swift; sourceTree = "<group>"; };
+		132652F5244A4E83003FDA45 /* JSONValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONValidationTests.swift; sourceTree = "<group>"; };
+		132652FF244A515B003FDA45 /* config-validator-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "config-validator-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13265313244A52E8003FDA45 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "config-validator-tests/Supporting Files/Info.plist"; sourceTree = "<group>"; };
+		1326531C244A5403003FDA45 /* PropertyListValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListValidationTests.swift; sourceTree = "<group>"; };
+		13265326244A5646003FDA45 /* empty.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = empty.plist; path = "config-validator-tests/Supporting Files/Property List/empty.plist"; sourceTree = SOURCE_ROOT; };
+		13265327244A5646003FDA45 /* invalid.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = invalid.plist; path = "config-validator-tests/Supporting Files/Property List/invalid.plist"; sourceTree = SOURCE_ROOT; };
+		13265328244A5646003FDA45 /* valid.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = valid.plist; path = "config-validator-tests/Supporting Files/Property List/valid.plist"; sourceTree = SOURCE_ROOT; };
+		1326532C244A5671003FDA45 /* empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = empty.json; path = "config-validator-tests/Supporting Files/JSON/empty.json"; sourceTree = SOURCE_ROOT; };
+		1326532D244A5671003FDA45 /* invalid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = invalid.json; path = "config-validator-tests/Supporting Files/JSON/invalid.json"; sourceTree = SOURCE_ROOT; };
+		1326532E244A5672003FDA45 /* valid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = valid.json; path = "config-validator-tests/Supporting Files/JSON/valid.json"; sourceTree = SOURCE_ROOT; };
 		1345777A20C1855D00D45C43 /* CommandLineArgument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineArgument.swift; sourceTree = "<group>"; };
 		1345777C20C1857E00D45C43 /* UploadMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadMethod.swift; sourceTree = "<group>"; };
 		1363053920FE35C700994D6D /* SlackMessagingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackMessagingService.swift; sourceTree = "<group>"; };
 		1363053C20FE3E0500994D6D /* DateFormatterAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterAdditions.swift; sourceTree = "<group>"; };
 		137228A420BFFB8E00866F25 /* ContentDeliveryNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDeliveryNetworkService.swift; sourceTree = "<group>"; };
-		1373812F20BD9E1500BAEA6C /* DefaultFileValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFileValidator.swift; sourceTree = "<group>"; };
 		1373813220BEA96B00BAEA6C /* GitVersionControlService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitVersionControlService.swift; sourceTree = "<group>"; };
 		1373813620BEA99800BAEA6C /* VersionControlService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionControlService.swift; sourceTree = "<group>"; };
 		1373813A20BEADBC00BAEA6C /* MessagingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingService.swift; sourceTree = "<group>"; };
@@ -63,8 +89,8 @@
 		13EA6C3F2194A9B20057724A /* ConfigValidatorArguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigValidatorArguments.swift; sourceTree = "<group>"; };
 		OBJ_10 /* CommandLineProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineProcessor.swift; sourceTree = "<group>"; };
 		OBJ_12 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
-		OBJ_15 /* JSONFileValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileValidator.swift; sourceTree = "<group>"; };
-		OBJ_16 /* PLUtilPropertyListFileValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLUtilPropertyListFileValidator.swift; sourceTree = "<group>"; };
+		OBJ_15 /* JSONSerializationValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializationValidationService.swift; sourceTree = "<group>"; };
+		OBJ_16 /* PLUtilValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLUtilValidationService.swift; sourceTree = "<group>"; };
 		OBJ_18 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
 		OBJ_19 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -72,6 +98,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		132652FC244A515B003FDA45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		OBJ_34 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
@@ -82,6 +115,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		132652F4244A457A003FDA45 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				132652F2244A4575003FDA45 /* FileValidationStrategy.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		132652F7244A4EB8003FDA45 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				13265313244A52E8003FDA45 /* Info.plist */,
+				1326531E244A553C003FDA45 /* JSON */,
+				1326531F244A5551003FDA45 /* Property List */,
+			);
+			name = "Supporting Files";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		13265300244A515B003FDA45 /* config-validator-tests */ = {
+			isa = PBXGroup;
+			children = (
+				132652F5244A4E83003FDA45 /* JSONValidationTests.swift */,
+				1326531C244A5403003FDA45 /* PropertyListValidationTests.swift */,
+				132652F7244A4EB8003FDA45 /* Supporting Files */,
+			);
+			path = "config-validator-tests";
+			sourceTree = "<group>";
+		};
+		1326531E244A553C003FDA45 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				1326532C244A5671003FDA45 /* empty.json */,
+				1326532D244A5671003FDA45 /* invalid.json */,
+				1326532E244A5672003FDA45 /* valid.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		1326531F244A5551003FDA45 /* Property List */ = {
+			isa = PBXGroup;
+			children = (
+				13265326244A5646003FDA45 /* empty.plist */,
+				13265327244A5646003FDA45 /* invalid.plist */,
+				13265328244A5646003FDA45 /* valid.plist */,
+			);
+			path = "Property List";
+			sourceTree = "<group>";
+		};
 		1345777E20C1859300D45C43 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +370,7 @@
 		OBJ_13 /* Validator */ = {
 			isa = PBXGroup;
 			children = (
+				132652F4244A457A003FDA45 /* Model */,
 				OBJ_14 /* Implementation */,
 				OBJ_17 /* Protocol */,
 			);
@@ -297,9 +380,9 @@
 		OBJ_14 /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_15 /* JSONFileValidator.swift */,
-				OBJ_16 /* PLUtilPropertyListFileValidator.swift */,
-				1373812F20BD9E1500BAEA6C /* DefaultFileValidator.swift */,
+				OBJ_15 /* JSONSerializationValidationService.swift */,
+				OBJ_16 /* PLUtilValidationService.swift */,
+				132652F0244A4549003FDA45 /* StrategicFileValidationService.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -312,17 +395,11 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		OBJ_20 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Tests;
-			sourceTree = SOURCE_ROOT;
-		};
 		OBJ_21 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				"config-validator::config-validator::Product" /* config-validator */,
+				132652FF244A515B003FDA45 /* config-validator-tests.xctest */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -332,7 +409,7 @@
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_20 /* Tests */,
+				13265300244A515B003FDA45 /* config-validator-tests */,
 				OBJ_21 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -370,6 +447,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		132652FE244A515B003FDA45 /* config-validator-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13265304244A515B003FDA45 /* Build configuration list for PBXNativeTarget "config-validator-tests" */;
+			buildPhases = (
+				132652FB244A515B003FDA45 /* Sources */,
+				132652FC244A515B003FDA45 /* Frameworks */,
+				132652FD244A515B003FDA45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "config-validator-tests";
+			productName = "config-validator-tests";
+			productReference = 132652FF244A515B003FDA45 /* config-validator-tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		"config-validator::SwiftPMPackageDescription" /* config-validatorPackageDescription */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_36 /* Build configuration list for PBXNativeTarget "config-validatorPackageDescription" */;
@@ -407,8 +501,14 @@
 		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1020;
 				TargetAttributes = {
+					132652FE244A515B003FDA45 = {
+						CreatedOnToolsVersion = 11.3;
+						DevelopmentTeam = R6FMX6D3C2;
+						ProvisioningStyle = Automatic;
+					};
 					"config-validator::config-validator" = {
 						LastSwiftMigration = 1020;
 					};
@@ -429,9 +529,27 @@
 			targets = (
 				"config-validator::config-validator" /* config-validator */,
 				"config-validator::SwiftPMPackageDescription" /* config-validatorPackageDescription */,
+				132652FE244A515B003FDA45 /* config-validator-tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		132652FD244A515B003FDA45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13265331244A5672003FDA45 /* valid.json in Resources */,
+				13265329244A5646003FDA45 /* empty.plist in Resources */,
+				1326532F244A5672003FDA45 /* empty.json in Resources */,
+				13265319244A52F8003FDA45 /* Info.plist in Resources */,
+				1326532B244A5646003FDA45 /* valid.plist in Resources */,
+				1326532A244A5646003FDA45 /* invalid.plist in Resources */,
+				13265330244A5672003FDA45 /* invalid.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		1383DE7B21696EA3005F5AC8 /* SwiftLint */ = {
@@ -455,6 +573,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		132652FB244A515B003FDA45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1326530A244A51A7003FDA45 /* JSONValidationTests.swift in Sources */,
+				1326530E244A5218003FDA45 /* ValidationService.swift in Sources */,
+				1326531D244A5403003FDA45 /* PropertyListValidationTests.swift in Sources */,
+				1326530F244A522F003FDA45 /* PLUtilValidationService.swift in Sources */,
+				1326530D244A520B003FDA45 /* FileValidationStrategy.swift in Sources */,
+				1326530C244A5207003FDA45 /* StrategicFileValidationService.swift in Sources */,
+				1326530B244A5204003FDA45 /* JSONSerializationValidationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		OBJ_27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
@@ -464,13 +596,13 @@
 				1373813320BEA96B00BAEA6C /* GitVersionControlService.swift in Sources */,
 				137228A520BFFB8E00866F25 /* ContentDeliveryNetworkService.swift in Sources */,
 				13EA6C2E219492110057724A /* Task.swift in Sources */,
+				132652F1244A4549003FDA45 /* StrategicFileValidationService.swift in Sources */,
 				OBJ_28 /* CommandLineProcessor.swift in Sources */,
 				13EA6C3E2194A9710057724A /* CommandLineArgumentsService.swift in Sources */,
 				OBJ_29 /* Services.swift in Sources */,
-				OBJ_30 /* JSONFileValidator.swift in Sources */,
-				OBJ_31 /* PLUtilPropertyListFileValidator.swift in Sources */,
+				OBJ_30 /* JSONSerializationValidationService.swift in Sources */,
+				OBJ_31 /* PLUtilValidationService.swift in Sources */,
 				OBJ_32 /* ValidationService.swift in Sources */,
-				1373813020BD9E1500BAEA6C /* DefaultFileValidator.swift in Sources */,
 				1373814220BEB39E00BAEA6C /* MessagingLevel.swift in Sources */,
 				13EA6C352194993D0057724A /* DefaultTaskService.swift in Sources */,
 				137609162130437100E14C2E /* AWSService.swift in Sources */,
@@ -479,6 +611,7 @@
 				1345777D20C1857E00D45C43 /* UploadMethod.swift in Sources */,
 				OBJ_33 /* main.swift in Sources */,
 				13DFFCC12106683700FBE71B /* Result.swift in Sources */,
+				132652F3244A4575003FDA45 /* FileValidationStrategy.swift in Sources */,
 				1373813B20BEADBC00BAEA6C /* MessagingService.swift in Sources */,
 				1321103F2191A51200F56785 /* MessagingOptions.swift in Sources */,
 				1345777B20C1855D00D45C43 /* CommandLineArgument.swift in Sources */,
@@ -501,6 +634,79 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		13265305244A515B003FDA45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R6FMX6D3C2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "config-validator-tests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rwbutler.config-validator-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		13265306244A515B003FDA45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = R6FMX6D3C2;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "config-validator-tests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rwbutler.config-validator-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		OBJ_25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -659,6 +865,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		13265304244A515B003FDA45 /* Build configuration list for PBXNativeTarget "config-validator-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13265305244A515B003FDA45 /* Debug */,
+				13265306244A515B003FDA45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		OBJ_2 /* Build configuration list for PBXProject "config-validator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

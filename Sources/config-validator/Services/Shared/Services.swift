@@ -28,7 +28,7 @@ struct Services {
     }
     
     static var validator: ValidationService {
-        return DefaultFileValidator()
+        return StrategicFileValidationService()
     }
     
     static var versionControl: VersionControlService {
