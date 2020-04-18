@@ -20,6 +20,30 @@ For more information on Config Validator, take a look at the [keynote presentati
 - [x] Supports integration with Slack.
 - [x] Written in Swift.
 
+## Usage
+
+In order to view options, execute `config-validator` with no arguments:
+
+```
+--cloudfront-distribution-id: Set to invalidate CloudFront distribution with the specified identifier.
+
+--force-upload: Uploads all validated files even where not modified in the latest commit.
+
+--files: Specifies files to be validated.
+
+--plist-validator: (-p) Specifies the Property List validator to use.
+
+--silent: (-s) Prevents output being emitted.
+
+--slack-url: Set to output to a Slack hook URL.
+
+--upload-method: Specifies the method of upload.
+
+--upload-urls: Specifies URLs to upload validated files to. Must contain same number of URLs as number of files to validate.
+
+--verbose: (-v) Emits verbose output.
+```
+
 ## Author
 
 [Ross Butler](https://github.com/rwbutler)
