@@ -25,7 +25,12 @@ enum FileValidationStrategy: CaseIterable {
         case .json:
             return JSONSerializationValidationService()
         case .propertyList:
-            return PLUtilValidationService()
+            switch propertyListValidator {
+            case .plUtil:
+                return PLUtilValidationService()
+            case .propertyListSerialization:
+                return PropertyListSerializationValidationService()
+            }
         }
     }
 }

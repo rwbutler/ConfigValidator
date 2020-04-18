@@ -21,6 +21,9 @@ struct ConfigValidatorArguments {
     /// Determines the amount of output produced.
     let messagingLevel: MessagingLevel
     
+    /// Property List validator to be used.
+    let propertyListValidator: PropertyListValidator
+    
     /// URL for posting Slack messages to.
     let slackHookURL: URL?
     
@@ -34,6 +37,7 @@ struct ConfigValidatorArguments {
           filePathArguments: [String],
           forceUpload: Bool,
           messagingLevel: MessagingLevel,
+          propertyListValidator: PropertyListValidator = .propertyListSerialization,
           slackHookURL: URL?,
           uploadURLs: [String]) {
         self.cloudFrontDistributionId = cloudFrontDistributionId
@@ -41,6 +45,7 @@ struct ConfigValidatorArguments {
         if self.filePathArguments.isEmpty { return nil }
         self.forceUpload = forceUpload
         self.messagingLevel = messagingLevel
+        self.propertyListValidator = propertyListValidator
         self.slackHookURL = slackHookURL
         self.uploadMethod = uploadURLs.allSatisfy({ $0.starts(with: "s3://") })
             ? .awss3
@@ -66,6 +71,7 @@ extension ConfigValidatorArguments: CustomStringConvertible {
         Files to validate: \(validationFilesStr)
         Force upload: \(forceUpload)
         Messaging level: \(messagingLevel)
+        Property List validator: \(propertyListValidator.rawValue)
         Slack hook URL: \(slackHookURL?.description ?? unsetParameterStr)
         Upload method: \(uploadMethod)
         Upload URLs: \(uploadFilesStr)

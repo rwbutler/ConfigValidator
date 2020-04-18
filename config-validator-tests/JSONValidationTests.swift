@@ -18,6 +18,8 @@ class JSONValidationTests: XCTestCase {
         }
         let jsonValidator = JSONSerializationValidationService()
         XCTAssertTrue(jsonValidator.isValid(fileURL: validFile))
+        
+        
         let strategicValidator = StrategicFileValidationService()
         XCTAssertTrue(strategicValidator.isValid(fileURL: validFile))
     }
@@ -30,6 +32,7 @@ class JSONValidationTests: XCTestCase {
         }
         let jsonValidator = JSONSerializationValidationService()
         XCTAssertFalse(jsonValidator.isValid(fileURL: validFile))
+        
         let strategicValidator = StrategicFileValidationService()
         XCTAssertFalse(strategicValidator.isValid(fileURL: validFile))
     }
@@ -42,6 +45,7 @@ class JSONValidationTests: XCTestCase {
         }
         let jsonValidator = JSONSerializationValidationService()
         XCTAssertFalse(jsonValidator.isValid(fileURL: validFile))
+        
         let strategicValidator = StrategicFileValidationService()
         XCTAssertFalse(strategicValidator.isValid(fileURL: validFile))
     }

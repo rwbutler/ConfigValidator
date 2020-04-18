@@ -2,8 +2,7 @@ import PackageDescription
 
 let package = Package(
     name: "Config Validator",
-    dependencies: [
-    ],
+    dependencies: [],
     targets: [
         .target(
             name: "Config Validator",

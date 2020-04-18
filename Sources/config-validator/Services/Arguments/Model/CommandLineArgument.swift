@@ -14,6 +14,7 @@ enum CommandLineArgument {
     case cloudFrontDistributionId
     case forceUpload
     case files
+    case propertyListValidator
     case silent
     case slackURL
     case uploadMethod
@@ -28,6 +29,8 @@ enum CommandLineArgument {
             return "Uploads all validated files even where not modified in the latest commit."
         case CommandLineArgument.files:
             return "Specifies files to be validated."
+        case CommandLineArgument.propertyListValidator:
+            return "(-p) Specifies the Property List validator to use."
         case CommandLineArgument.silent:
             return "(-s) Prevents output being emitted."
         case CommandLineArgument.slackURL:
@@ -49,8 +52,8 @@ enum CommandLineArgument {
 extension CommandLineArgument: CaseIterable {
     
     public static var allCases: [CommandLineArgument] {
-        return [.cloudFrontDistributionId, .forceUpload, .files, .silent, .slackURL,
-                .uploadMethod, .uploadURLs, .verbose]
+        return [.cloudFrontDistributionId, .forceUpload, .files, .propertyListValidator,
+                .silent, .slackURL, .uploadMethod, .uploadURLs, .verbose]
     }
     
 }
@@ -67,6 +70,8 @@ extension CommandLineArgument: RawRepresentable {
             self = .forceUpload
         case CommandLineArgument.files.description:
             self = .files
+        case "-p", CommandLineArgument.propertyListValidator.description:
+            self = .propertyListValidator
         case "-s", CommandLineArgument.silent.description:
             self = .silent
         case CommandLineArgument.slackURL.description:
@@ -102,6 +107,8 @@ extension CommandLineArgument: CustomStringConvertible {
             return "--force-upload"
         case .files:
             return "--files"
+        case .propertyListValidator:
+            return "--plist-validator"
         case .silent:
             return "--silent"
         case .slackURL:

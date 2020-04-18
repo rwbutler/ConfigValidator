@@ -18,6 +18,10 @@ class PropertyListValidationTests: XCTestCase {
         }
         let plUtilValidator = PLUtilValidationService()
         XCTAssertTrue(plUtilValidator.isValid(fileURL: validFile))
+        
+        let propertyListSerializationValidator = PropertyListSerializationValidationService()
+        XCTAssertTrue(propertyListSerializationValidator.isValid(fileURL: validFile))
+        
         let strategicValidator = StrategicFileValidationService()
         XCTAssertTrue(strategicValidator.isValid(fileURL: validFile))
     }
@@ -30,6 +34,10 @@ class PropertyListValidationTests: XCTestCase {
         }
         let plUtilValidator = PLUtilValidationService()
         XCTAssertFalse(plUtilValidator.isValid(fileURL: validFile))
+        
+        let propertyListSerializationValidator = PropertyListSerializationValidationService()
+        XCTAssertFalse(propertyListSerializationValidator.isValid(fileURL: validFile))
+        
         let strategicValidator = StrategicFileValidationService()
         XCTAssertFalse(strategicValidator.isValid(fileURL: validFile))
     }
@@ -42,6 +50,10 @@ class PropertyListValidationTests: XCTestCase {
         }
         let plUtilValidator = PLUtilValidationService()
         XCTAssertFalse(plUtilValidator.isValid(fileURL: validFile))
+        
+        let propertyListSerializationValidator = PropertyListSerializationValidationService()
+        XCTAssertFalse(propertyListSerializationValidator.isValid(fileURL: validFile))
+        
         let strategicValidator = StrategicFileValidationService()
         XCTAssertFalse(strategicValidator.isValid(fileURL: validFile))
     }

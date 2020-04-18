@@ -16,19 +16,13 @@ class CommandLineProcessor {
     private let validator = Services.validator
     private let versionControlService = Services.versionControl
     
-    // swiftlint:disable:next function_body_length
     func main() {
         guard let applicationArguments = argumentsService.processArguments(CommandLine.arguments) else {
             printUsage()
             return
         }
-        
-        // Set messaging level
-        self.messagingService = Services.messaging(level: applicationArguments.messagingLevel,
-                                              options: .all,
-                                              slackHookURL: applicationArguments.slackHookURL)
-        messagingService.message("\(applicationArguments.description)",
-            level: .verbose)
+        setMessagingLevel(using: applicationArguments)
+        messagingService.message("\(applicationArguments.description)", level: .verbose)
         
         // Check whether all files pass validation
         let validationURLs: [URL] = applicationArguments.filePathArguments
@@ -41,7 +35,7 @@ class CommandLineProcessor {
             let filesFailedValidation = failedValidation.joined(separator: ",")
             messagingService.message("The following files failed validation: \(filesFailedValidation)", level: .warn)
             return
-
+            
         }
         
         // Print files passing validation
@@ -70,8 +64,8 @@ class CommandLineProcessor {
             messagingService.message("Is a version controlled repository.", level: .verbose)
             printFilesModifiedInRepository(url: repositoryURL)
             fileUploads = filesToUpload(sourceURLs: validationURLs,
-                                          destinationURLs: applicationArguments.uploadURLs,
-                                          forceUpload: applicationArguments.forceUpload)
+                                        destinationURLs: applicationArguments.uploadURLs,
+                                        forceUpload: applicationArguments.forceUpload)
         } else {
             messagingService.message("Not a version controlled repository or toolchain not found.", level: .verbose)
             fileUploads = zip(validationURLs, applicationArguments.uploadURLs).map({ ($0, $1) })
@@ -109,10 +103,10 @@ class CommandLineProcessor {
     func invalidateURLs(_ urls: [URL], cloudFrontDistributionId: String) {
         guard !urls.isEmpty else { return }
         // Invalidate cache for uploaded filex
-            let pathsToInvalidate = urls.map({ $0.path })
-            messagingService.message("Invalidating files at: \(pathsToInvalidate.joined(separator: ",  "))",
-                level: .default)
-            cdnService.invalidateCache(distributionId: cloudFrontDistributionId, for: pathsToInvalidate)
+        let pathsToInvalidate = urls.map({ $0.path })
+        messagingService.message("Invalidating files at: \(pathsToInvalidate.joined(separator: ",  "))",
+            level: .default)
+        cdnService.invalidateCache(distributionId: cloudFrontDistributionId, for: pathsToInvalidate)
     }
     
     /// Determines whether or not the specified file has been modified in the last Git commit.
@@ -149,7 +143,7 @@ class CommandLineProcessor {
         }
         let modifiedFilesString = modifiedFiles.joined(separator: ", ")
         messagingService.message("Modified in latest commit: \(modifiedFilesString)",
-                level: .verbose)
+            level: .verbose)
     }
     
     /// Provides guidance on how to use the application.
@@ -171,21 +165,37 @@ class CommandLineProcessor {
         for upload in uploads {
             let sourceURL = upload.0
             let destinationURL = upload.1
-
-                let uploadSuccessful = cdnService.upload(fileURL: sourceURL, uploadURL: destinationURL)
-                let sourceFileName = sourceURL.lastPathComponent
-                let destinationFileName = destinationURL.lastPathComponent
-                if uploadSuccessful {
-                    uploadedSuccessfully.append(destinationURL)
-                    let message = "Uploaded \(sourceFileName) to \(destinationFileName) successfully.\n"
-                    messagingService.message(message, level: .default)
-                } else {
-                    let message = "Failed to upload \(sourceFileName) to \(destinationFileName).\n"
-                    messagingService.message(message, level: .default)
-                    break
-                }
+            
+            let uploadSuccessful = cdnService.upload(fileURL: sourceURL, uploadURL: destinationURL)
+            let sourceFileName = sourceURL.lastPathComponent
+            let destinationFileName = destinationURL.lastPathComponent
+            if uploadSuccessful {
+                uploadedSuccessfully.append(destinationURL)
+                let message = "Uploaded \(sourceFileName) to \(destinationFileName) successfully.\n"
+                messagingService.message(message, level: .default)
+            } else {
+                let message = "Failed to upload \(sourceFileName) to \(destinationFileName).\n"
+                messagingService.message(message, level: .default)
+                break
+            }
         }
         return uploadedSuccessfully
+    }
+    
+}
+
+private extension CommandLineProcessor {
+    
+    private func setMessagingLevel(using arguments: ConfigValidatorArguments) {
+        messagingService = Services.messaging(
+            level: arguments.messagingLevel,
+            options: .all,
+            slackHookURL: arguments.slackHookURL
+        )
+    }
+    
+    private func setPropertyListValidator(_ validator: PropertyListValidator) {
+        propertyListValidator = validator
     }
     
 }

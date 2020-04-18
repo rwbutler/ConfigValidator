@@ -17,7 +17,6 @@
 		1326530D244A520B003FDA45 /* FileValidationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132652F2244A4575003FDA45 /* FileValidationStrategy.swift */; };
 		1326530E244A5218003FDA45 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* ValidationService.swift */; };
 		1326530F244A522F003FDA45 /* PLUtilValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* PLUtilValidationService.swift */; };
-		13265319244A52F8003FDA45 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13265313244A52E8003FDA45 /* Info.plist */; };
 		1326531D244A5403003FDA45 /* PropertyListValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1326531C244A5403003FDA45 /* PropertyListValidationTests.swift */; };
 		13265329244A5646003FDA45 /* empty.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13265326244A5646003FDA45 /* empty.plist */; };
 		1326532A244A5646003FDA45 /* invalid.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13265327244A5646003FDA45 /* invalid.plist */; };
@@ -36,6 +35,10 @@
 		1373813F20BEAE7500BAEA6C /* ConsoleMessagingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373813E20BEAE7500BAEA6C /* ConsoleMessagingService.swift */; };
 		1373814220BEB39E00BAEA6C /* MessagingLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373814120BEB39E00BAEA6C /* MessagingLevel.swift */; };
 		137609162130437100E14C2E /* AWSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137609152130437100E14C2E /* AWSService.swift */; };
+		13ACBD4F244B598300930657 /* PropertyListSerializationValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ACBD4E244B598300930657 /* PropertyListSerializationValidationService.swift */; };
+		13ACBD53244B74F100930657 /* PropertyListSerializationValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ACBD4E244B598300930657 /* PropertyListSerializationValidationService.swift */; };
+		13ACBD55244B751500930657 /* PropertyListValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ACBD54244B751500930657 /* PropertyListValidator.swift */; };
+		13ACBD56244B751500930657 /* PropertyListValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ACBD54244B751500930657 /* PropertyListValidator.swift */; };
 		13DFFCC12106683700FBE71B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DFFCC02106683700FBE71B /* Result.swift */; };
 		13EA6C2E219492110057724A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA6C2D219492110057724A /* Task.swift */; };
 		13EA6C32219498420057724A /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA6C31219498420057724A /* TaskService.swift */; };
@@ -79,6 +82,8 @@
 		1373813E20BEAE7500BAEA6C /* ConsoleMessagingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleMessagingService.swift; sourceTree = "<group>"; };
 		1373814120BEB39E00BAEA6C /* MessagingLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingLevel.swift; sourceTree = "<group>"; };
 		137609152130437100E14C2E /* AWSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSService.swift; sourceTree = "<group>"; };
+		13ACBD4E244B598300930657 /* PropertyListSerializationValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListSerializationValidationService.swift; sourceTree = "<group>"; };
+		13ACBD54244B751500930657 /* PropertyListValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListValidator.swift; sourceTree = "<group>"; };
 		13DFFCC02106683700FBE71B /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		13EA6C2D219492110057724A /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		13EA6C31219498420057724A /* TaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
@@ -164,18 +169,11 @@
 			path = "Property List";
 			sourceTree = "<group>";
 		};
-		1345777E20C1859300D45C43 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				1345777A20C1855D00D45C43 /* CommandLineArgument.swift */,
-				1345777C20C1857E00D45C43 /* UploadMethod.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		1363053B20FE3DE700994D6D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				OBJ_19 /* main.swift */,
+				OBJ_10 /* CommandLineProcessor.swift */,
 				13EA6C502198DAD20057724A /* Extensions */,
 				13760917213043BB00E14C2E /* Model */,
 			);
@@ -248,15 +246,6 @@
 				1373813A20BEADBC00BAEA6C /* MessagingService.swift */,
 			);
 			path = Protocol;
-			sourceTree = "<group>";
-		};
-		1373813C20BEAE1100BAEA6C /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				1345777E20C1859300D45C43 /* Model */,
-				OBJ_10 /* CommandLineProcessor.swift */,
-			);
-			path = UI;
 			sourceTree = "<group>";
 		};
 		1373813D20BEAE1B00BAEA6C /* Services */ = {
@@ -346,7 +335,10 @@
 		13EA6C4F2198D7CA0057724A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1345777A20C1855D00D45C43 /* CommandLineArgument.swift */,
 				13EA6C3F2194A9B20057724A /* ConfigValidatorArguments.swift */,
+				1345777C20C1857E00D45C43 /* UploadMethod.swift */,
+				13ACBD54244B751500930657 /* PropertyListValidator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -382,6 +374,7 @@
 			children = (
 				OBJ_15 /* JSONSerializationValidationService.swift */,
 				OBJ_16 /* PLUtilValidationService.swift */,
+				13ACBD4E244B598300930657 /* PropertyListSerializationValidationService.swift */,
 				132652F0244A4549003FDA45 /* StrategicFileValidationService.swift */,
 			);
 			path = Implementation;
@@ -427,8 +420,6 @@
 			children = (
 				1363053B20FE3DE700994D6D /* Shared */,
 				1373813D20BEAE1B00BAEA6C /* Services */,
-				1373813C20BEAE1100BAEA6C /* UI */,
-				OBJ_19 /* main.swift */,
 			);
 			name = "config-validator";
 			path = "Sources/config-validator";
@@ -502,7 +493,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					132652FE244A515B003FDA45 = {
 						CreatedOnToolsVersion = 11.3;
@@ -542,7 +533,6 @@
 				13265331244A5672003FDA45 /* valid.json in Resources */,
 				13265329244A5646003FDA45 /* empty.plist in Resources */,
 				1326532F244A5672003FDA45 /* empty.json in Resources */,
-				13265319244A52F8003FDA45 /* Info.plist in Resources */,
 				1326532B244A5646003FDA45 /* valid.plist in Resources */,
 				1326532A244A5646003FDA45 /* invalid.plist in Resources */,
 				13265330244A5672003FDA45 /* invalid.json in Resources */,
@@ -584,6 +574,8 @@
 				1326530D244A520B003FDA45 /* FileValidationStrategy.swift in Sources */,
 				1326530C244A5207003FDA45 /* StrategicFileValidationService.swift in Sources */,
 				1326530B244A5204003FDA45 /* JSONSerializationValidationService.swift in Sources */,
+				13ACBD53244B74F100930657 /* PropertyListSerializationValidationService.swift in Sources */,
+				13ACBD56244B751500930657 /* PropertyListValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +591,7 @@
 				132652F1244A4549003FDA45 /* StrategicFileValidationService.swift in Sources */,
 				OBJ_28 /* CommandLineProcessor.swift in Sources */,
 				13EA6C3E2194A9710057724A /* CommandLineArgumentsService.swift in Sources */,
+				13ACBD4F244B598300930657 /* PropertyListSerializationValidationService.swift in Sources */,
 				OBJ_29 /* Services.swift in Sources */,
 				OBJ_30 /* JSONSerializationValidationService.swift in Sources */,
 				OBJ_31 /* PLUtilValidationService.swift in Sources */,
@@ -618,6 +611,7 @@
 				13EA6C402194A9B20057724A /* ConfigValidatorArguments.swift in Sources */,
 				13EA6C3C2194A9630057724A /* ArgumentsService.swift in Sources */,
 				13EA6C32219498420057724A /* TaskService.swift in Sources */,
+				13ACBD55244B751500930657 /* PropertyListValidator.swift in Sources */,
 				13EA6C372194A6DB0057724A /* GitVersionControlAction.swift in Sources */,
 				1373813F20BEAE7500BAEA6C /* ConsoleMessagingService.swift in Sources */,
 			);
@@ -710,6 +704,7 @@
 		OBJ_25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -731,6 +726,7 @@
 		OBJ_26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",

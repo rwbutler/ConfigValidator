@@ -18,11 +18,12 @@ struct CommandLineArgumentsService: ArgumentsService {
         var slackHookURL: URL?
         var uploadURLs: [String] = []
         var parsingMode: CommandLineArgument = .none
+        var propertyListValidator: PropertyListValidator = .propertyListSerialization
         
         for i in 1 ..< CommandLine.arguments.count {
             let argument = CommandLineArgument(rawValue: CommandLine.arguments[i])
             switch argument {
-            case .cloudFrontDistributionId, .files, .uploadURLs, .uploadMethod:
+            case .cloudFrontDistributionId, .files, .propertyListValidator, .uploadURLs, .uploadMethod:
                 parsingMode = argument
             case .forceUpload:
                 parsingMode = .none
@@ -41,6 +42,8 @@ struct CommandLineArgumentsService: ArgumentsService {
                     cloudFrontDistributionId = argument.description
                 case .files:
                     filePathArguments.append(argument.description)
+                case .propertyListValidator:
+                    propertyListValidator = self.propertyListValidator(from: argument.description)
                 case .slackURL:
                     slackHookURL = URL(string: argument.description)
                 case .uploadURLs:
@@ -51,11 +54,20 @@ struct CommandLineArgumentsService: ArgumentsService {
             }
         }
         return ConfigValidatorArguments(cloudFrontDistributionId: cloudFrontDistributionId,
-                                 filePathArguments: filePathArguments,
-                                 forceUpload: forceUpload,
-                                 messagingLevel: messagingLevel,
-                                 slackHookURL: slackHookURL,
-                                 uploadURLs: uploadURLs)
+                                        filePathArguments: filePathArguments,
+                                        forceUpload: forceUpload,
+                                        messagingLevel: messagingLevel,
+                                        propertyListValidator: propertyListValidator,
+                                        slackHookURL: slackHookURL,
+                                        uploadURLs: uploadURLs)
+    }
+    
+    /// Takes an argument and attempts to turn it into a Property List validator.
+    private func propertyListValidator(from argument: String) -> PropertyListValidator {
+        let result = PropertyListValidator.allCases.first { validator in
+            return argument.lowercased() == validator.rawValue.lowercased()
+        }
+        return result ?? .propertyListSerialization
     }
     
 }
