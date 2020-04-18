@@ -19,7 +19,6 @@ class JSONValidationTests: XCTestCase {
         let jsonValidator = JSONSerializationValidationService()
         XCTAssertTrue(jsonValidator.isValid(fileURL: validFile))
         
-        
         let strategicValidator = StrategicFileValidationService()
         XCTAssertTrue(strategicValidator.isValid(fileURL: validFile))
     }

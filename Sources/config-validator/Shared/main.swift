@@ -7,6 +7,5 @@
 
 import Foundation
 
-// Application entry point
 var commandLineService = CommandLineProcessor()
 commandLineService.main()
