@@ -8,4 +8,5 @@
 import Foundation
 
 var commandLineService = CommandLineProcessor()
-commandLineService.main()
+let returnCode = commandLineService.main()
+exit(returnCode.rawValue)

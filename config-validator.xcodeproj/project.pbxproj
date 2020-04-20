@@ -26,6 +26,7 @@
 		13265331244A5672003FDA45 /* valid.json in Resources */ = {isa = PBXBuildFile; fileRef = 1326532E244A5672003FDA45 /* valid.json */; };
 		1345777B20C1855D00D45C43 /* CommandLineArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345777A20C1855D00D45C43 /* CommandLineArgument.swift */; };
 		1345777D20C1857E00D45C43 /* UploadMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345777C20C1857E00D45C43 /* UploadMethod.swift */; };
+		13486DD7244E40E000312CC8 /* ReturnCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13486DD6244E40E000312CC8 /* ReturnCode.swift */; };
 		1363053A20FE35C700994D6D /* SlackMessagingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1363053920FE35C700994D6D /* SlackMessagingService.swift */; };
 		1363053D20FE3E0500994D6D /* DateFormatterAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1363053C20FE3E0500994D6D /* DateFormatterAdditions.swift */; };
 		137228A520BFFB8E00866F25 /* ContentDeliveryNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137228A420BFFB8E00866F25 /* ContentDeliveryNetworkService.swift */; };
@@ -73,6 +74,7 @@
 		1326532E244A5672003FDA45 /* valid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = valid.json; path = "config-validator-tests/Supporting Files/JSON/valid.json"; sourceTree = SOURCE_ROOT; };
 		1345777A20C1855D00D45C43 /* CommandLineArgument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineArgument.swift; sourceTree = "<group>"; };
 		1345777C20C1857E00D45C43 /* UploadMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadMethod.swift; sourceTree = "<group>"; };
+		13486DD6244E40E000312CC8 /* ReturnCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnCode.swift; sourceTree = "<group>"; };
 		1363053920FE35C700994D6D /* SlackMessagingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackMessagingService.swift; sourceTree = "<group>"; };
 		1363053C20FE3E0500994D6D /* DateFormatterAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterAdditions.swift; sourceTree = "<group>"; };
 		137228A420BFFB8E00866F25 /* ContentDeliveryNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDeliveryNetworkService.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			children = (
 				OBJ_19 /* main.swift */,
 				OBJ_10 /* CommandLineProcessor.swift */,
+				13486DD6244E40E000312CC8 /* ReturnCode.swift */,
 				13EA6C502198DAD20057724A /* Extensions */,
 				13760917213043BB00E14C2E /* Model */,
 			);
@@ -589,6 +592,7 @@
 				137228A520BFFB8E00866F25 /* ContentDeliveryNetworkService.swift in Sources */,
 				13EA6C2E219492110057724A /* Task.swift in Sources */,
 				132652F1244A4549003FDA45 /* StrategicFileValidationService.swift in Sources */,
+				13486DD7244E40E000312CC8 /* ReturnCode.swift in Sources */,
 				OBJ_28 /* CommandLineProcessor.swift in Sources */,
 				13EA6C3E2194A9710057724A /* CommandLineArgumentsService.swift in Sources */,
 				13ACBD4F244B598300930657 /* PropertyListSerializationValidationService.swift in Sources */,

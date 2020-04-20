@@ -16,10 +16,10 @@ class CommandLineProcessor {
     private let validator = Services.validator
     private let versionControlService = Services.versionControl
     
-    func main() {
+    func main() -> ReturnCode {
         guard let applicationArguments = argumentsService.processArguments(CommandLine.arguments) else {
             printUsage()
-            return
+            return .invalidArguments
         }
         setMessagingLevel(using: applicationArguments)
         messagingService.message("\(applicationArguments.description)", level: .verbose)
@@ -33,9 +33,8 @@ class CommandLineProcessor {
                 .filter({ !validator.isValid(fileURL: $0) })
                 .map({ $0.description })
             let filesFailedValidation = failedValidation.joined(separator: ",")
-            messagingService.message("The following files failed validation: \(filesFailedValidation)", level: .warn)
-            return
-            
+            messagingService.message("The following files failed validation: \(filesFailedValidation)", level: .default)
+            return .failedValidation
         }
         
         // Print files passing validation
@@ -48,9 +47,9 @@ class CommandLineProcessor {
         guard applicationArguments.uploadMethod == .awss3 else {
             guard validationURLs.count == applicationArguments.uploadURLs.count else {
                 messagingService.message("Files argument count not equal to number of upload URLs count.", level: .warn)
-                return
+                return .invalidArguments
             }
-            return
+            return .invalidArguments
         }
         
         // Files to be uploaded
@@ -80,10 +79,12 @@ class CommandLineProcessor {
             let madePublic = setPubliclyReadable(urls: uploadedFiles)
             
             // Invalidate cache
-            guard let cloudFrontId = applicationArguments.cloudFrontDistributionId else { return }
+            guard let cloudFrontId = applicationArguments.cloudFrontDistributionId else {
+                return .invalidArguments
+            }
             invalidateURLs(madePublic, cloudFrontDistributionId: cloudFrontId)
         }
-        
+        return .success
     }
     
     /// Determines whether or not all of the files at the specified URLs passed validation successfully.
