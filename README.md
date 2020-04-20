@@ -20,6 +20,24 @@ For more information on Config Validator, take a look at the [keynote presentati
 - [x] Supports integration with Slack.
 - [x] Written in Swift.
 
+## Installation
+
+### Homebrew
+
+To install using [Homebrew](https://brew.sh), run the following command:
+
+```
+brew install rwbutler/tools/config-validator
+```
+
+### Swift Package Manager
+
+To build using Swift Package Manager, run the following command:
+
+```
+swift build -c release --disable-sandbox
+```
+
 ## Usage
 
 In order to view options, execute `config-validator` with no arguments:
