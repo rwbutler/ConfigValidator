@@ -30,6 +30,14 @@ To install using [Homebrew](https://brew.sh), run the following command:
 brew install rwbutler/tools/config-validator
 ```
 
+### Mint
+
+To install using [Mint](https://github.com/yonaskolb/Mint) run the following command:
+
+```bash
+mint install rwbutler/configvalidator 
+```
+
 ### Swift Package Manager
 
 To build using Swift Package Manager, run the following command:
